@@ -13,8 +13,9 @@
 		AA0E893D2DB9DBF500FA3171 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E893C2DB9DBF500FA3171 /* FavoritesView.swift */; };
 		AA0E89422DB9F8B500FA3171 /* CustomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E89412DB9F8B500FA3171 /* CustomCard.swift */; };
 		AA0E89442DBAD9D200FA3171 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E89432DBAD9D200FA3171 /* DetailView.swift */; };
-		AA0E89472DBC239300FA3171 /* Recipe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA0E89452DBC239300FA3171 /* Recipe.xcdatamodeld */; };
-		AA0E894E2DBC450600FA3171 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E894D2DBC450600FA3171 /* RecipeViewModel.swift */; };
+		AA0E89552DBC53F300FA3171 /* CustomFavoriteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E89542DBC53F300FA3171 /* CustomFavoriteCard.swift */; };
+		AA0E89572DBC546600FA3171 /* RecipesCoreDataVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E89562DBC546600FA3171 /* RecipesCoreDataVM.swift */; };
+		AA0E895D2DBC97DA00FA3171 /* RecipesCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA0E895B2DBC97DA00FA3171 /* RecipesCoreData.xcdatamodeld */; };
 		AA6559892DB961CF00EDD662 /* Fetch_RecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6559882DB961CF00EDD662 /* Fetch_RecipesApp.swift */; };
 		AA65598B2DB961CF00EDD662 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA65598A2DB961CF00EDD662 /* ContentView.swift */; };
 		AA65598D2DB961D200EDD662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA65598C2DB961D200EDD662 /* Assets.xcassets */; };
@@ -29,8 +30,9 @@
 		AA0E893C2DB9DBF500FA3171 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		AA0E89412DB9F8B500FA3171 /* CustomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCard.swift; sourceTree = "<group>"; };
 		AA0E89432DBAD9D200FA3171 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		AA0E89462DBC239300FA3171 /* Recipe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipe.xcdatamodel; sourceTree = "<group>"; };
-		AA0E894D2DBC450600FA3171 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		AA0E89542DBC53F300FA3171 /* CustomFavoriteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFavoriteCard.swift; sourceTree = "<group>"; };
+		AA0E89562DBC546600FA3171 /* RecipesCoreDataVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCoreDataVM.swift; sourceTree = "<group>"; };
+		AA0E895C2DBC97DA00FA3171 /* RecipesCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipesCoreData.xcdatamodel; sourceTree = "<group>"; };
 		AA6559852DB961CF00EDD662 /* Fetch-Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetch-Recipes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6559882DB961CF00EDD662 /* Fetch_RecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch_RecipesApp.swift; sourceTree = "<group>"; };
 		AA65598A2DB961CF00EDD662 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0E89412DB9F8B500FA3171 /* CustomCard.swift */,
+				AA0E89542DBC53F300FA3171 /* CustomFavoriteCard.swift */,
 			);
 			path = CustomComponent;
 			sourceTree = "<group>";
@@ -80,8 +83,8 @@
 		AA0E894A2DBC301100FA3171 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				AA0E89452DBC239300FA3171 /* Recipe.xcdatamodeld */,
-				AA0E894D2DBC450600FA3171 /* RecipeViewModel.swift */,
+				AA0E89562DBC546600FA3171 /* RecipesCoreDataVM.swift */,
+				AA0E895B2DBC97DA00FA3171 /* RecipesCoreData.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -196,17 +199,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0E89552DBC53F300FA3171 /* CustomFavoriteCard.swift in Sources */,
 				AA0E89422DB9F8B500FA3171 /* CustomCard.swift in Sources */,
+				AA0E895D2DBC97DA00FA3171 /* RecipesCoreData.xcdatamodeld in Sources */,
 				AA0E89442DBAD9D200FA3171 /* DetailView.swift in Sources */,
 				AA65598B2DB961CF00EDD662 /* ContentView.swift in Sources */,
 				AA6559972DB9623500EDD662 /* fetchRecipes.swift in Sources */,
 				AA0E89332DB9D6F100FA3171 /* RecipesViewModel.swift in Sources */,
 				AA6559892DB961CF00EDD662 /* Fetch_RecipesApp.swift in Sources */,
 				AA0E893D2DB9DBF500FA3171 /* FavoritesView.swift in Sources */,
-				AA0E894E2DBC450600FA3171 /* RecipeViewModel.swift in Sources */,
-				AA0E89472DBC239300FA3171 /* Recipe.xcdatamodeld in Sources */,
 				AA0E89352DB9D70F00FA3171 /* RecipesView.swift in Sources */,
 				AA0E89302DB96BDE00FA3171 /* Recipes.swift in Sources */,
+				AA0E89572DBC546600FA3171 /* RecipesCoreDataVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,13 +422,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AA0E89452DBC239300FA3171 /* Recipe.xcdatamodeld */ = {
+		AA0E895B2DBC97DA00FA3171 /* RecipesCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AA0E89462DBC239300FA3171 /* Recipe.xcdatamodel */,
+				AA0E895C2DBC97DA00FA3171 /* RecipesCoreData.xcdatamodel */,
 			);
-			currentVersion = AA0E89462DBC239300FA3171 /* Recipe.xcdatamodel */;
-			path = Recipe.xcdatamodeld;
+			currentVersion = AA0E895C2DBC97DA00FA3171 /* RecipesCoreData.xcdatamodel */;
+			path = RecipesCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

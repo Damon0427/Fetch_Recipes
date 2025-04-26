@@ -6,11 +6,11 @@ struct AllRecipes : Codable {
 }
 
 struct recipe:Codable, Identifiable {
+    let id :String
     let cuisine: String
     let name: String
     let photoURLLarge: String?
     let photoURLSmall: String?
-    let id = UUID()
     let sourceURL : String?
     let youtubeURL: String?
     
@@ -21,6 +21,7 @@ struct recipe:Codable, Identifiable {
         case photoURLSmall = "photo_url_small"
         case sourceURL = "source_url"
         case youtubeURL = "youtube_url"
+        case id = "uuid"
     }
     
 }

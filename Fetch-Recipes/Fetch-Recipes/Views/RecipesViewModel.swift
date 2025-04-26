@@ -5,7 +5,11 @@ import Foundation
 final class RecipesViewModel: ObservableObject {
     @Published var recipes : [recipe] = []
     @Published var errorMessage = ""
+    @Published var isEmpty = false
     private let service = ReciptService()
+    
+    
+    // This function perform the API call and handle different error scenarios
     
     func loadRecipes() {
             Task {
@@ -13,8 +17,16 @@ final class RecipesViewModel: ObservableObject {
                     let allRecipes = try await service.fetchRecipesData()
                     self.recipes = allRecipes.recipes
                     print(self.recipes)
+        
+                    self.isEmpty = self.recipes.isEmpty
+                    self.errorMessage = ""
+                    
                 } catch {
-                    print(error.localizedDescription)
+                    print("Error: \(error.localizedDescription)")
+                    errorMessage = error.localizedDescription
+                    self.isEmpty = true
+                    
+                    
                 }
             }
         }

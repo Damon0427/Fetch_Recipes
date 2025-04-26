@@ -3,12 +3,11 @@ import SwiftUI
 
 struct DetailView: View {
     let recipe: recipe
-    @State private var isFavorited = false
-    @StateObject private var coreDataVM = RecipeViewModel()
+    @State var isFavorited: Bool = false
+    @StateObject private var recipeVM = RecipesCDViewModel()
     
     var body: some View {
-        ScrollView{
-            
+       
             VStack{
                 ZStack(alignment:.center){
                     AsyncImage(url: URL(string: recipe.photoURLLarge ?? "" )) { phase in
@@ -38,16 +37,36 @@ struct DetailView: View {
                     }
                     }
                 VStack(alignment: .leading, spacing: 4) {
-                    
-                    
-                    
-                    HStack(alignment: .firstTextBaseline) {
+                    HStack{
                         
-                     
                         Text("\(recipe.name)")
-                        .font(.system(size: 29, weight: .semibold, design: .default))
+                            .font(.system(size: 29, weight: .semibold, design: .default))
+                        Spacer()
+                        
+                        Button {
+                            
+                            if isFavorited {
+                                recipeVM.deleteRecipe(id: recipe.id)
+                            } else {
+                                recipeVM.addRecipe(id: recipe.id,
+                                                   name: recipe.name,
+                                                   photoURL: recipe.photoURLSmall ?? "",
+                                                   sourceURL: recipe.sourceURL ?? "",
+                                                   cuisine: recipe.cuisine,
+                                                   youtubeURL: recipe.youtubeURL ?? "")
+                            }
+                            isFavorited.toggle()
+
+                        } label: {
+                            Image(systemName: isFavorited ? "heart.fill" : "heart")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(isFavorited ? .pink : .gray)
+                                .frame(width:25 , height: 25)
+                            
                         }
                         
+                    }
 
                     Text("- \(recipe.cuisine)")
                         .font(.system(.callout, weight: .medium))
@@ -60,22 +79,13 @@ struct DetailView: View {
                 
                 VStack{
                     Text("Source Link:")
-                        .font(.system(size: 24, weight: .semibold, design: .default))
+                        .font(.system(size: 24, weight: .semibold))
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                     HStack(alignment:.bottom
                            , spacing: 30){
                         
-                        Button {
-                            isFavorited.toggle()
-                        } label: {
-                            Image(systemName: isFavorited ? "heart.fill" : "heart")
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundColor(isFavorited ? .pink : .gray)
-                                .frame(width:25 , height: 25)
-                            
-                        }
+                        
                     
                         if let sourceURL = recipe.sourceURL, let url = URL(string: sourceURL ) {
                             Link(destination: url) {
@@ -102,28 +112,20 @@ struct DetailView: View {
                 .padding(.top, 12)
                 
                     
-                Button(action: {
-                    print("Saved!")
-                }) {
-                    Text("Save")
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(.white)
-                        .padding(.vertical, 10)
-                        .padding(.horizontal, 30)
-                        .background(.ultraThinMaterial)
-                        .cornerRadius(12)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(Color.white.opacity(0.2), lineWidth: 1)
-                        )
-                        .shadow(color: Color.black.opacity(0.4), radius: 6, x: 0, y: 3)
+                
                 }
-                .padding()
-                }
-            }
             
-        }
+            .onAppear{
+                
+                isFavorited = recipeVM.checkIfFavorite(id: recipe.id)
+                
+            }
+        
+            }
+
+            
     }
+    
 
 
 

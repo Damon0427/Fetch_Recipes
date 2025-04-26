@@ -1,18 +1,35 @@
 
 import Foundation
 
-enum ApiError : Error {
+enum ApiError: Error, LocalizedError {
     case invailURL
-    case invailToken
-    case invailRequest
     case invailHttpResponse
+    case invailFormat
+    
+    var errorDescription: String? {
+        switch self {
+        case .invailURL:
+            return "The request URL is Invalid, check the endpoint"
+        case .invailHttpResponse:
+            return "Invalid HTTP Response from the Service"
+        case .invailFormat:
+            return "The Data is invalid formatted, Fail at decoding the data"
+        }
+    }
 }
+
+var endPoint = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
+var MalformedData = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json"
+var emptyData = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json"
 
 struct ReciptService{
     
+    /*
+     Sending the Api request to the Service，using json decoder to phrase the data
+     */
     func fetchRecipesData () async throws -> AllRecipes {
         
-        guard let url = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json") else{
+        guard let url = URL(string: endPoint) else{
             throw ApiError.invailURL
         }
         
@@ -26,9 +43,14 @@ struct ReciptService{
         
         let decoder = JSONDecoder()
         
-        return try decoder.decode(AllRecipes.self, from: data)
-        
-        
+        do {
+            
+            return try decoder.decode(AllRecipes.self, from: data)
+            } catch {
+                
+                print("Decoding failed: \(error)")
+                throw ApiError.invailFormat
+            }
     }
 }
 

@@ -8,15 +8,25 @@ struct RecipesView: View {
         NavigationView {
             ScrollView {
                 VStack(spacing: 16) {
-                    ForEach(viewModel.recipes) { recipe in
+                    if viewModel.errorMessage != "" && viewModel.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .font(.system(size: 20))
+
+                    }else if viewModel.isEmpty{
+                        Text("No recipes available")
+                            .font(.system(size: 20))
                         
-                        Button {
-                            selectedRecipe = recipe
+                    }else{
+                        ForEach(viewModel.recipes) { recipe in
+                            
+                            Button {
+                                selectedRecipe = recipe
                             } label: {
                                 CustomCard(recipe: recipe)
                                 
-                                }
+                            }
                             .foregroundColor(.primary)
+                        }
                     }
                 }
             }
