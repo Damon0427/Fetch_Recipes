@@ -67,7 +67,7 @@ class RecipesCDViewModel: ObservableObject {
     }
     
     // This function is use to update the Bool value for the button
-    // check if a recipe exist in the storage by searching the their unie id 
+    // check if a recipe exist in the storage by searching the their unie id
     
     func checkIfFavorite(id: String) -> Bool {
         return saveRecipes.contains(where: { $0.id == id })
