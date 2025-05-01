@@ -13,15 +13,28 @@
   Custom card views are used for better UI consistency and to improve code reuse across different parts of the app.
   
 
-### Home Page
-<img src="Screenshots/HomePage.jpg" width="200" height = "400"/>
-### Detail View
-<img src="Screenshots/DetailView.jpg" width="200" height = "400" />
-### SearchResult View
-<img src="Screenshots/SearchResult.jpg" width="200" height = "400"/>
-### Favorites Page
-<img src="Screenshots/FavoritesPage.jpg" width="200" height = "400" />
+### ScreenShoots:
+<div style="display: flex; gap: 20px;">
+  <div style="text-align: center;">
+    <div style="margin-bottom: 8px; font-weight: bold;">Home Page</div>
+    <img src="Screenshots/homePage.jpg" width="200" height="400"/>
+  </div>
 
+  <div style="text-align: center;">
+    <div style="margin-bottom: 8px; font-weight: bold;">Detail View</div>
+    <img src="Screenshots/DetailView.jpg" width="200" height="400"/>
+  </div>
+
+  <div style="text-align: center;">
+    <div style="margin-bottom: 8px; font-weight: bold;">Search Result</div>
+    <img src="Screenshots/SearchResult.jpg" width="200" height="400"/>
+  </div>
+
+  <div style="text-align: center;">
+    <div style="margin-bottom: 8px; font-weight: bold;">Favorites Page</div>
+    <img src="Screenshots/FavoritesPage.jpg" width="200" height="400"/>
+  </div>
+</div>
 
 
 ---
