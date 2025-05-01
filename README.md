@@ -1,5 +1,7 @@
 ### Summary: 
-    This project is a recipe browsing app built using the MVVM architecture with SwiftUI. It fetches data from a public API, making integration fast and straightforward.
+    This project is a recipe browsing app built using the MVVM architecture with SwiftUI. It fetches data from a public
+    API, making integration fast and straightforward.
+    
 - **Favorites with Core Data**  
   Users can save their favorite recipes locally. The app uses Core Data to persist data, so favorites remain available even after restarting the app.
 
