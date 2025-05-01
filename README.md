@@ -12,15 +12,15 @@
 - **Reusable UI Components**  
   Custom card views are used for better UI consistency and to improve code reuse across different parts of the app.
   
-### Screenshots
+
 ### Home Page
-![Home Page](Screenshots/homePage.jpg)
+<img src="Screenshots/HomePage.jpg" width="200" height = "400"/>
 ### Detail View
-![Detail View](Screenshots/DetailView.jpg)
+<img src="Screenshots/DetailView.jpg" width="200" height = "400" />
 ### SearchResult View
-![SearchResult View](Screenshots/SearchResult.jpg)
+<img src="Screenshots/SearchResult.jpg" width="200" height = "400"/>
 ### Favorites Page
-![Favorites Page](Screenshots/FavoritesPage.jpg)
+<img src="Screenshots/FavoritesPage.jpg" width="200" height = "400" />
 
 
 
