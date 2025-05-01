@@ -4,6 +4,7 @@ import SwiftUI
 struct RecipesView: View {
     @State private var selectedRecipe: recipe? = nil
     @StateObject var viewModel = RecipesViewModel()
+    @State var searchName = ""
     var body: some View {
         NavigationView {
             ScrollView {
@@ -17,7 +18,7 @@ struct RecipesView: View {
                             .font(.system(size: 20))
                         
                     }else{
-                        ForEach(viewModel.recipes) { recipe in
+                        ForEach(viewModel.filterRecipes) { recipe in
                             
                             Button {
                                 selectedRecipe = recipe
@@ -37,14 +38,24 @@ struct RecipesView: View {
                     .presentationDragIndicator(.visible)
                     .presentationDetents([.height(650)])
             }
+            .searchable(text: $searchName)
 
         }
-        
         .task {
-            
-                viewModel.loadRecipes()
-            
+            viewModel.loadRecipes()
             }
+        .overlay{
+            if viewModel.filterRecipes.isEmpty && !viewModel.recipes.isEmpty {
+                EmptyView(searchName: $searchName)
+            }
+        }
+        .onSubmit(of: .search) {
+            viewModel.search(with: searchName)
+        }
+        .onChange(of: searchName) { name in
+            viewModel.search(with: name)
+        }
+        
         }
         
     }
