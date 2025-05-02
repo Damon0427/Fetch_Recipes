@@ -15,10 +15,14 @@ API,making integration fast and straightforward.
 
 ### ScreenShoots:
 <div style="display: flex; gap: 10px;">
+  - Home Page  
   <img src="Screenshots/homePage.jpg" width="200" height="400"/>
-  <img src="Screenshots/DetailView.jpg" width="200" height="400" />
+  - Recipe Detail View  
+  <img src="Screenshots/DetailView.jpg" width="200" height="400"/>
+  - Search Results  
   <img src="Screenshots/SearchResult.jpg" width="200" height="400"/>
-  <img src="Screenshots/FavoritesPage.jpg" width="200" height="400" />
+  - Favorites Page    
+  <img src="Screenshots/FavoritesPage.jpg" width="200" height="400"/>
 </div>
 
 ---
@@ -47,19 +51,19 @@ each stage of the development process.
 ---
 
 ### Trade-offs and Decisions: 
-```
+
 I made a significant trade-off in how I handled data storage. In the beginning, I used local structs for simplicity, but
 later I decided to integrate Core Data to enable data persistence and provide a convenient way for users to save their
 favorite recipes.
-```
+
 ---
 
 ### Weakest Part of the Project: 
 
-```
+
 I think the weakest part of my project is the frontend UI design compared to the backend. because I focused more on the
 backend logic and spent less time polishing the visuals. 
-```
+
 ---
 
 ### Additional Information: 
@@ -76,8 +80,7 @@ Overall, this experience really helped me grow as an iOS developer. And I am loo
 ---
 
 
-###  Technologies Used  
+### 🛠️ Technologies Used  
 - **Languages**: Swift  
 - **Frameworks**: SwiftUI, Core Data  
 - **Tools**: Xcode, Git  
-- **Concepts**: MVVM, Concurrency (`async/await`)  
