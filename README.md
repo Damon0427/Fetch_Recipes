@@ -19,26 +19,32 @@ API,making integration fast and straightforward.
 
 <div style="text-align: center;">
   <p style="margin-bottom: 8px; font-weight: 500;">Home Page</p>
-  <img src="Screenshots/homePage.jpg" width="200" height="400" style="border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"/>
+  <img src="Screenshots/homePage.jpg" width="200" height="400" style="border-radius: 8px; "/>
 </div>
+
 
 <div style="text-align: center;">
   <p style="margin-bottom: 8px; font-weight: 500;">Recipe Detail View</p>
-  <img src="Screenshots/DetailView.jpg" width="200" height="400" style="border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"/>
+  <img src="Screenshots/DetailView.jpg" width="200" height="400" style="border-radius: 8px; "/>
 </div>
+
 
 <div style="text-align: center;">
   <p style="margin-bottom: 8px; font-weight: 500;">Search Results</p>
-  <img src="Screenshots/SearchResult.jpg" width="200" height="400" style="border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"/>
+  <img src="Screenshots/SearchResult.jpg" width="200" height="400" style="border-radius: 8px; "/>
 </div>
+
 
 <div style="text-align: center;">
   <p style="margin-bottom: 8px; font-weight: 500;">Favorites Page</p>
-  <img src="Screenshots/FavoritesPage.jpg" width="200" height="400" style="border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"/>
+  <img src="Screenshots/FavoritesPage.jpg" width="200" height="400" style="border-radius: 8px;"/>
 </div>
 
+
 </div>
-    
+
+---
+
 ### Focus Areas: 
 
 In this project, I mainly focused on **Core Data** and the **MVVM architecture**.Core Data allows the app to store user
