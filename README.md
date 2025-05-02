@@ -61,6 +61,7 @@ a more stable and scalable app.
 - API and CoreData: 4 hours
 - MVVM Architecture: 1 hour
 - Debugging And Testing: 3 hours
+
 Total: 12 hours
 
 I usually plan in advance when I aim to complete each part of the project, and I allocate time for debugging throughout
