@@ -24,6 +24,7 @@ struct RecipesView: View {
                                 selectedRecipe = recipe
                             } label: {
                                 CustomCard(recipe: recipe)
+                                    .padding()
                                 
                             }
                             .foregroundColor(.primary)
