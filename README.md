@@ -13,19 +13,31 @@ API,making integration fast and straightforward.
   - URL link handling to original recipes
   - Reusable UI components
 
-### ScreenShoots:
-<div style="display: flex; gap: 10px;">
-  - Home Page  
-  <img src="Screenshots/homePage.jpg" width="200" height="400"/>
-  - Recipe Detail View  
-  <img src="Screenshots/DetailView.jpg" width="200" height="400"/>
-  - Search Results  
-  <img src="Screenshots/SearchResult.jpg" width="200" height="400"/>
-  - Favorites Page    
-  <img src="Screenshots/FavoritesPage.jpg" width="200" height="400"/>
+### App Screenshots
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 20px 0;">
+
+<div style="text-align: center;">
+  <p style="margin-bottom: 8px; font-weight: 500;">Home Page</p>
+  <img src="Screenshots/homePage.jpg" width="200" height="400" style="border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"/>
 </div>
 
----
+<div style="text-align: center;">
+  <p style="margin-bottom: 8px; font-weight: 500;">Recipe Detail View</p>
+  <img src="Screenshots/DetailView.jpg" width="200" height="400" style="border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"/>
+</div>
+
+<div style="text-align: center;">
+  <p style="margin-bottom: 8px; font-weight: 500;">Search Results</p>
+  <img src="Screenshots/SearchResult.jpg" width="200" height="400" style="border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"/>
+</div>
+
+<div style="text-align: center;">
+  <p style="margin-bottom: 8px; font-weight: 500;">Favorites Page</p>
+  <img src="Screenshots/FavoritesPage.jpg" width="200" height="400" style="border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"/>
+</div>
+
+</div>
     
 ### Focus Areas: 
 
